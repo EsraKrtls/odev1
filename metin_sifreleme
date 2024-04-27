@@ -1,0 +1,39 @@
+import java.util.Scanner;
+public class MetinSifrelemeProgrami {
+      public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("sifreleme yapacaksaniz 1, sifre cozecekseniz 2 giriniz.");
+        int secim = scanner.nextInt();
+
+        if (secim == 1) {
+            System.out.print("Metni giriniz: ");
+            String metin = scanner.next();
+
+            System.out.print("Geri öteleme miktarini giriniz: ");
+            int geriOteleme = scanner.nextInt();
+
+            String sifrelenmisMetin = sifrele(metin, geriOteleme);
+            System.out.println("sifrelenmis Metin: " + sifrelenmisMetin);
+        } else if (secim == 2) {
+            System.out.print("sifre cozulecek metni giriniz: ");
+            String sifreliMetin = scanner.next();
+
+            System.out.print("Geri öteleme miktarini giriniz: ");
+            int geriOteleme = scanner.nextInt();
+
+            String cozulmusMetin = sifrele(sifreliMetin, 26 - geriOteleme);
+            System.out.println("cözülmüs Metin: " + cozulmusMetin);
+        } else {
+            System.out.println("Gecersiz secim. Lütfen 1 veya 2 giriniz.");
+        }
+
+        scanner.close();
+    }
+
+    public static String sifrele(String metin, int geriOteleme) {
+       
+        return ""; 
+    }
+}
+
